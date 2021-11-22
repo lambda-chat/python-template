@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "TEMP"
+version = "0.1.0"
+description = ""
+authors = [
+    "your name <your.name@example.com>",
+]
+readme = "README.md"
+include = []
+build = "build.py"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+isort = "^5.9.3"
+pytest = "^6.2.5"
+pyproject-flake8 = "^0.0.1-alpha.2"
+black = "^21.10b0"
+mypy = "^0.910"
+
+[build-system]
+requires = [
+    "poetry_core>=1.0.0",
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+## http://flake8.readthedocs.org/en/latest/warnings.html
+## http://pep8.readthedocs.org/en/latest/intro.html#error-codes
+ignore = ["W503", "W504", "E203"]
+max-line-length = 99
+exclude = [
+    ".git",
+    "__pycache__",
+    "old",
+    "build",
+    "dist",
+    ".venv",
+    "venv",
+]
+
+[tool.black]
+line-length = 99
+exclude = '''
+(
+    migrations
+    | .mypy_cache
+    | .pytest_cache
+    | .tox
+    | .venv
+)
+'''
+
+[tool.pyright]
+include = [
+    "src",
+]
+exclude = [
+    ".venv",
+    "**/__pycache__",
+]
+ignore = []
+stubPath = "typings"
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "^3.8"
+executionEnvironments = []
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 99
+multi_line_output = 3
+skip_glob = []
