@@ -1,4 +1,4 @@
-# Template
+# Python Template
 
 A Python project template
 
@@ -15,7 +15,7 @@ Test by `pytest`.
 
 ```sh
 $ python -m pytest tests
-====  test session starts ====
+===== test session starts =====
 platform linux -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
 rootdir: /workspace/TEMP
 collected 1 item
