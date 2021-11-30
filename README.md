@@ -9,7 +9,17 @@ A Python project template for VS Code.
 
 ## Environment Check
 
-At first, build a development container from `.devcontainer/devcontainer.json` using VS Code.
+At first, build a development container from `.devcontainer/devcontainer.json`, using VS Code. The sample `devcontainer.json` is in `.devcontainer/sample/`. You can customize your development environment by modifying the sample json. See also `.vscode/sample/`.
+
+Easy setup for devcontainer.
+
+```sh
+cd .devcontainer
+cp sample/devcontainer.json .
+cd ../.vscode
+cp sample/settings.json .
+cd ..
+```
 
 Execute a module.
 
