@@ -1,8 +1,15 @@
 # Python Template
 
-A Python project template
+A Python project template for VS Code.
+
+## Requirements
+
+- VS Code (with `Remote - Containers` extension by Microsoft)
+- Docker
 
 ## Environment Check
+
+At first, build a development container from `.devcontainer/devcontainer.json` using VS Code.
 
 Execute a module.
 
