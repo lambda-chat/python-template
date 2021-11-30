@@ -1,4 +1,5 @@
 import pytest
+
 from project_name.sample import hello
 
 

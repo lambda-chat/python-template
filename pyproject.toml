@@ -1,13 +1,17 @@
 [tool.poetry]
-name = "TEMP"
+name = "project_name"
 version = "0.1.0"
 description = ""
 authors = [
     "your name <your.name@example.com>",
 ]
 readme = "README.md"
-include = []
-build = "build.py"
+packages = [
+    { include = "project_name", from = "src" },
+]
+include = [
+    { path = "tests", format = "sdist" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -23,8 +27,6 @@ mypy = "^0.910"
 [build-system]
 requires = [
     "poetry_core>=1.0.0",
-    "setuptools>=42",
-    "wheel",
 ]
 build-backend = "poetry.core.masonry.api"
 

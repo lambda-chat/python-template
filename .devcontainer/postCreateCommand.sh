@@ -5,7 +5,10 @@ PASSWORD=password
 # install python packages
 pip3 install poetry
 poetry config virtualenvs.create false
-poetry install --no-root
+poetry install
+
+# chown dist/ volume
+echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/TEMP/dist/
 
 # change default shell to fish
 echo $PASSWORD | chsh -s $(which fish)
