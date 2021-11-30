@@ -57,7 +57,8 @@ exclude = '''
 
 [tool.pyright]
 include = [
-    "src",
+    "project_name",
+    "tests",
 ]
 exclude = [
     ".venv",
