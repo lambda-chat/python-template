@@ -48,10 +48,14 @@ tests/test_sample.py .   [100%]
 
 Imports in test file(s) are valid owing to `poetry install` that makes this project be a package. If you do not want to make the package, use `poetry install --no-root` instead, and set `PYTHONPATH` to `src` in some way.
 
-## Note(s)
+## Notes
 
-`dist/` is empty volume which masks original `dist/` if exists.
+`dist/` is empty volume which masks original `dist/` if it exists.
 
-## Known issue(s)
+## Known issues
 
-`poetry install` always updates most packages like this issue [#2079](https://github.com/python-poetry/poetry/issues/2079).
+If you set `virtualenvs.create` to `false` in `postCreateCommand.sh`, then `poetry install` always updates most packages like this issue [#2079](https://github.com/python-poetry/poetry/issues/2079). As for now, it is set to `true`.
+
+## Production Container
+
+See `.prod/`.
