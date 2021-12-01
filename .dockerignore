@@ -1,0 +1,14 @@
+# VS Code
+.devcontainer/
+.vscode/
+
+# Python
+.venv/
+dist/
+tests/
+**/__pycache__/
+**/.mypy_cache/
+**/.pytest_cache/
+
+# Others
+.prod/
