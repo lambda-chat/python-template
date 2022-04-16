@@ -16,4 +16,5 @@
         "DavidAnson.vscode-markdownlint",
     ],
     "remoteUser": "1000",
+    "postCreateCommand": "PASSWORD=password .devcontainer/init.sh"
 }

@@ -18,7 +18,8 @@
     "files.exclude": {
         "**/__pycache__": true,
         "**/.mypy_cache": true,
-        "**/.pytest_cache": true
+        "**/.pytest_cache": true,
+        ".cache": true,
     },
     // exported when debugging with VS Code
     "python.envFile": "${workspaceFolder}/.env",
