@@ -166,4 +166,5 @@ cython_debug/
 
 ## Devcontainer
 .devcontainer/devcontainer.json
+.devcontainer/docker-compose.yml
 .cache

@@ -7,4 +7,5 @@ services:
     volumes:
       - ../:/workspace/TEMP
       - /workspace/TEMP/dist/
-      - /workspace/TEMP/.cache/
+      - $HOME/.ssh:/home/docker-user/.ssh
+      - $HOME/.akr:/home/docker-user/.akr  # if needed
