@@ -14,12 +14,6 @@
         "eamodio.gitlens",
         // markdown
         "DavidAnson.vscode-markdownlint",
-        // spell checker
-        "streetsidesoftware.code-spell-checker",
     ],
-    "remoteEnv": {
-        "GIT_EDITOR": "/usr/bin/vim"
-    },
     "remoteUser": "1000",
-    "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
 }
