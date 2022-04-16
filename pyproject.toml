@@ -1,20 +1,20 @@
 [tool.poetry]
-name = "project_name"
+name = "this-package-name"
 version = "0.1.0"
-description = ""
+description = "A Python project template."
 authors = [
-    "your name <your.name@example.com>",
+    "lambda-chat <chat.algebrique@gmail.com>",
 ]
 readme = "README.md"
 packages = [
-    { include = "project_name", from = "src" },
+    { include = "package_name", from = "src" },
 ]
 include = [
     { path = "tests", format = "sdist" },
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
@@ -59,7 +59,7 @@ exclude = '''
 
 [tool.pyright]
 include = [
-    "project_name",
+    "package_name",
     "tests",
 ]
 exclude = [

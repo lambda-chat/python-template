@@ -1,6 +1,12 @@
-#!/bin/bash -x
+#!/bin/bash -eux
 
-PASSWORD=password
+if [ -e .cache/.initialized ]; then
+    exit 0
+fi
+
+# chown dist/ .cache/ volume
+echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/TEMP/.cache/
+echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/TEMP/dist/
 
 # install python packages
 pip3 install poetry
@@ -14,12 +20,6 @@ else
 fi
 poetry install
 
-# chown dist/ volume
-echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/TEMP/dist/
-
-# change default shell to fish
-echo $PASSWORD | chsh -s $(which fish)
-
 # install starship prompt 
 curl -fsSL https://starship.rs/install.sh -o starship_install.sh
 echo $PASSWORD | sudo --stdin sh starship_install.sh -y
@@ -28,4 +28,4 @@ mkdir -p ~/.config/fish
 echo "starship init fish | source" >> ~/.config/fish/config.fish
 fish -c "set -U fish_greeting"
 
-unset PASSWORD
+touch .cache/.initialized

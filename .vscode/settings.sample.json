@@ -1,6 +1,4 @@
 {
-    // settings for python
-    "python.pythonPath": "python",
     // settings for linter
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
@@ -9,7 +7,7 @@
     "python.linting.flake8Args": [
         "--max-line=length",
         "99",
-        "--ignore=W503,W504,E203",
+        "--ignore=W503,W504",
     ],
     // settings for formatter
     "python.formatting.provider": "black",
@@ -20,10 +18,9 @@
     "files.exclude": {
         "**/__pycache__": true,
         "**/.mypy_cache": true,
-        "**/.pytest_cache": true
+        "**/.pytest_cache": true,
+        ".cache": true,
     },
     // exported when debugging with VS Code
     "python.envFile": "${workspaceFolder}/.env",
-    // cSpell settings (make the union if it conflicts)
-    "cSpell.words": [],
 }

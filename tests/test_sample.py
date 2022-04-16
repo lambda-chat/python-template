@@ -1,6 +1,6 @@
 import pytest
 
-from project_name.sample import hello
+from package_name.sample import hello
 
 
 def test_hello() -> None:

@@ -7,3 +7,4 @@ services:
     volumes:
       - ../:/workspace/TEMP
       - /workspace/TEMP/dist/
+      - /workspace/TEMP/.cache/
