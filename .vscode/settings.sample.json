@@ -1,6 +1,4 @@
 {
-    // settings for python
-    "python.pythonPath": "python",
     // settings for linter
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
@@ -24,6 +22,4 @@
     },
     // exported when debugging with VS Code
     "python.envFile": "${workspaceFolder}/.env",
-    // cSpell settings (make the union if it conflicts)
-    "cSpell.words": [],
 }
