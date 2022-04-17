@@ -1,8 +1,8 @@
 {
-    "name": "TEMP",
+    "name": "WORKSPACE",
     "dockerComposeFile": "./docker-compose.yml",
     "overrideCommand": false,
-    "workspaceFolder": "/workspace/TEMP",
+    "workspaceFolder": "/workspace/WORKSPACE",
     "service": "dev",
     "extensions": [
         // python

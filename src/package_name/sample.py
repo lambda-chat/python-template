@@ -3,4 +3,6 @@ def hello() -> str:
 
 
 if __name__ == "__main__":
-    print(hello())
+    import sys
+
+    print(hello(), file=sys.stderr)

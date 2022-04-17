@@ -5,7 +5,5 @@ services:
       context: ..
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
-      - ../:/workspace/TEMP
-      - /workspace/TEMP/dist/
-      - $HOME/.ssh:/home/docker-user/.ssh
-      - $HOME/.akr:/home/docker-user/.akr  # if needed
+      - ../:/workspace/WORKSPACE
+      - /workspace/WORKSPACE/dist/
