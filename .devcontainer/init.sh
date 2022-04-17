@@ -1,12 +1,11 @@
 #!/bin/bash -eux
 
-if [ -e .cache/.initialized ]; then
-    exit 0
-fi
+# How To Use init.sh
+#   (bash) $ PASSWORD=password .devcontainer/init.sh
+#   (fish) $ env PASSWORD=password .devcontainer/init.sh
 
-# chown dist/ .cache/ volume
-echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/TEMP/.cache/
-echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/TEMP/dist/
+# chown dist/ volume
+echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/WORKSPACE/dist/
 
 # install python packages
 pip3 install poetry
@@ -27,5 +26,3 @@ rm starship_install.sh
 mkdir -p ~/.config/fish
 echo "starship init fish | source" >> ~/.config/fish/config.fish
 fish -c "set -U fish_greeting"
-
-touch .cache/.initialized

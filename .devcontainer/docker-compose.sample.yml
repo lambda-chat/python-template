@@ -5,6 +5,5 @@ services:
       context: ..
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
-      - ../:/workspace/TEMP
-      - /workspace/TEMP/dist/
-      - /workspace/TEMP/.cache/
+      - ../:/workspace/WORKSPACE
+      - /workspace/WORKSPACE/dist/

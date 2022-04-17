@@ -38,7 +38,7 @@ If you use `poetry install --no-root` instead, you need to move `src/` to execut
 $ python -m pytest tests/
 ===== test session starts =====
 platform linux -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
-rootdir: /workspace/TEMP
+rootdir: /workspace/WORKSPACE
 collected 1 item
 
 tests/test_sample.py .   [100%]

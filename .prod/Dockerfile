@@ -3,8 +3,8 @@ FROM python:3.10-bullseye
 # for PRODUCTION (in construction)
 
 # add files
-ADD . /src/TEMP
-WORKDIR /src/TEMP
+ADD . /src/WORKSPACE
+WORKDIR /src/WORKSPACE
 
 # Create a user
 ARG USER=docker-user
