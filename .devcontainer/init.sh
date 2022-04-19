@@ -7,6 +7,14 @@
 # chown dist/ volume
 echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/WORKSPACE/dist/
 
+# gpg setting
+echo $PASSWORD | sudo --stdin mkdir -p /opt/homebrew/bin
+if [ ! -e /opt/homebrew/bin/gpg ]; then
+    echo $PASSWORD | sudo --stdin ln -s /usr/bin/gpg /opt/homebrew/bin/gpg
+fi
+export GPG_TTY=$(tty)
+fish -c "set -Ux GPG_TTY (tty)"
+
 # install python packages
 pip3 install poetry
 

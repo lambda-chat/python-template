@@ -5,5 +5,17 @@ services:
       context: ..
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
-      - ../:/workspace/WORKSPACE
-      - /workspace/WORKSPACE/dist/
+      - type: bind
+        source: ../
+        target: /workspace/WORKSPACE
+      - type: volume
+        target: /workspace/WORKSPACE/dist/
+      - type: bind
+        source: ~/.gitconfig
+        target: /home/docker-user/.gitconfig
+      - type: bind
+        source: ~/.gnupg/
+        target: /home/docker-user/.gnupg
+      - type: bind
+        source: ./gpg-agent.conf
+        target: /home/docker-user/.gnupg/gpg-agent.conf
