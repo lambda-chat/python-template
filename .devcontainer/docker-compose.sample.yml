@@ -19,3 +19,6 @@ services:
       - type: bind
         source: ./gpg-agent.conf
         target: /home/docker-user/.gnupg/gpg-agent.conf
+      - type: bind
+        source: ~/.ssh/
+        target: /home/docker-user/.ssh
