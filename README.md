@@ -57,7 +57,7 @@ Imports in test file(s) are valid owing to `poetry install` that makes this proj
 
 - `dist/` is empty volume which masks original `dist/` if it exists.
 - You cannot commit with GUI if GPG is activated. Use the integrated terminal instead.
-- If you already created virtualenvs outside of container, please remove `.venv` and `.cache` before "Reopen Folder in Container".
+- If you already created virtualenvs outside of container, please remove `.venv` before "Reopen Folder in Container".
 
 ## Known issues
 
