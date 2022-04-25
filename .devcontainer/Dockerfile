@@ -2,6 +2,11 @@ FROM python:3.9.12-bullseye
 
 WORKDIR /workspace/WORKSPACE
 
+# To install github cli
+RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+    | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" \
+    | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 # To install fish
 RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_11/ /' \
     | tee /etc/apt/sources.list.d/shells:fish:release:3.list \
@@ -11,11 +16,12 @@ RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3
 # Install fish, sudo, vim, less, git-lfs (if needed)
 RUN apt-get update \
     && apt-get install -y \
+    gh \
+    git-lfs \ 
     fish \
     sudo \
     vim \
     less \
-    git-lfs \ 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

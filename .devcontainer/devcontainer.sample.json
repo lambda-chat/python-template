@@ -18,5 +18,5 @@
         "ms-azuretools.vscode-docker",
     ],
     "remoteUser": "1000",
-    "postCreateCommand": "PASSWORD=password .devcontainer/init.sh"
+    "postCreateCommand": "PASSWORD=password .devcontainer/postCreateCommand.sh"
 }
