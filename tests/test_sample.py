@@ -1,4 +1,4 @@
-import pytest
+import pytest  # NOQA
 
 from package_name.sample import hello
 

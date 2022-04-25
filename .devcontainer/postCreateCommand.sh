@@ -1,8 +1,8 @@
 #!/bin/bash -eux
 
-# How To Use init.sh
-#   (bash) $ PASSWORD=password .devcontainer/init.sh
-#   (fish) $ env PASSWORD=password .devcontainer/init.sh
+# How To Use postCreateCommand.sh
+#   (bash) $ PASSWORD=password .devcontainer/postCreateCommand.sh
+#   (fish) $ env PASSWORD=password .devcontainer/postCreateCommand.sh
 
 # chown dist/ volume
 echo $PASSWORD | sudo --stdin chown -R docker-user:docker /workspace/WORKSPACE/dist/

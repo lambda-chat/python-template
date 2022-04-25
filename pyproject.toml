@@ -1,17 +1,11 @@
 [tool.poetry]
-name = "this-package-name"
+name = "package-name"
 version = "0.1.0"
-description = "A Python project template."
+description = "A Python Project Template."
 authors = [
     "lambda-chat <chat.algebrique@gmail.com>",
 ]
 readme = "README.md"
-packages = [
-    { include = "package_name", from = "src" },
-]
-include = [
-    { path = "tests", format = "sdist" },
-]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -22,7 +16,6 @@ isort = "^5.9.3"
 pytest = "^6.2.5"
 pyproject-flake8 = "^0.0.1-alpha.2"
 black = "^21.10b0"
-mypy = "^0.910"
 
 [build-system]
 requires = [
@@ -33,7 +26,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.flake8]
 ## http://flake8.readthedocs.org/en/latest/warnings.html
 ## http://pep8.readthedocs.org/en/latest/intro.html#error-codes
-ignore = ["W503", "W504", "E203"]
+ignore = ["W503", "W504"]
 max-line-length = 99
 exclude = [
     ".git",
@@ -67,10 +60,10 @@ exclude = [
     "**/__pycache__",
 ]
 ignore = []
-stubPath = "typings"
+stubPath = ""
 reportMissingImports = true
 reportMissingTypeStubs = false
-pythonVersion = "^3.8"
+pythonVersion = "^3.9"
 executionEnvironments = []
 
 [tool.isort]
