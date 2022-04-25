@@ -1,6 +1,9 @@
 version: '3'
 services:
-  temp:
+  prod:
+    container_name: prod-container
     build:
       context: ..
       dockerfile: ./.prod/Dockerfile
+    tty: true
+    restart: always

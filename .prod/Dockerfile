@@ -1,9 +1,15 @@
-FROM python:3.10-bullseye
+FROM python:3.9.12-bullseye
 
 # for PRODUCTION (in construction)
 
+# Sample usage:
+#     $ docker compose up -d
+#     $ docker exec prod-container python -m package_name.sample
+#     Hello, World!
+#     $ docker compose down
+
 # add files
-ADD . /src/WORKSPACE
+COPY . /src/WORKSPACE
 WORKDIR /src/WORKSPACE
 
 # Create a user
@@ -19,11 +25,9 @@ USER ${USER}
 ENV HOME=/home/${USER}
 ENV PATH=${HOME}/.local/bin:${PATH}
 ARG PATH_TO_BIN=${HOME}/.local/bin
-RUN echo "PATH=${PATH_TO_BIN}:\${PATH}" >> ${HOME}/.bash_profile 
+RUN echo "export PATH=${PATH_TO_BIN}:\${PATH}" >> ${HOME}/.bash_profile 
 
 # Install Python packages
 RUN pip install poetry && \
     poetry config virtualenvs.create false && \
     poetry install --no-dev
-
-ENTRYPOINT ["/bin/sh", "-c", "while :; do sleep 100; done"]
