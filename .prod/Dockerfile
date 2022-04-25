@@ -1,6 +1,6 @@
 FROM python:3.9.12-bullseye
 
-# for PRODUCTION (in construction)
+# for PRODUCTION
 
 # Sample usage:
 #     $ docker compose up -d
@@ -8,7 +8,7 @@ FROM python:3.9.12-bullseye
 #     Hello, World!
 #     $ docker compose down
 
-# add files
+# Copy files
 COPY . /src/WORKSPACE
 WORKDIR /src/WORKSPACE
 
