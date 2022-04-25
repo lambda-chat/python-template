@@ -5,7 +5,7 @@ FROM python:3.9.12-bullseye
 # Sample usage:
 #     $ docker compose up -d
 #     $ docker exec prod-container python -m package_name.sample
-#     Hello, World!
+#     Hello World!
 #     $ docker compose down
 
 # Copy files
