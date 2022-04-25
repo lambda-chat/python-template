@@ -9,6 +9,8 @@
         "99",
         "--ignore=W503,W504",
     ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "workspace",
     // settings for formatter
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "black",
