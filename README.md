@@ -11,8 +11,6 @@ A Python project template for VS Code.
 
 ## About Environments
 
-At first, build a development container from `.devcontainer/devcontainer.json`, using VS Code. The sample `devcontainer.json` is in `.devcontainer/sample/`. You can customize your development environment by modifying the sample json. See also `.vscode/sample/`.
-
 ### Easy setup for devcontainer
 
 Mac, Linux
@@ -27,7 +25,7 @@ Windows
 PowerShell -ExecutionPolicy RemoteSigned .\.devcontainer\preCreateCommand.ps1
 ```
 
-If you do not use Github CLI or GnuPG, please modify `.devcontainer/docker-compose.yml` (and `Dockerfile`, `postCreateCommand.sh`).
+If you do not use Github CLI or GnuPG, please modify `.devcontainer/docker-compose.yml` (and `.devcontainer/Dockerfile`, `.devcontainer/postCreateCommand.sh`).
 Then **Reopen Folder in Container** with VS Code extension.
 
 ### Check whether this project is correctly recognized
