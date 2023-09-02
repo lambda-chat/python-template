@@ -1,0 +1,16 @@
+{
+    // settings for linter
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "workspace",
+    // settings for formatter
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    // settings for explorer in VS Code
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+    },
+    // exported when debugging with VS Code
+    "python.envFile": "${workspaceFolder}/.env",
+}

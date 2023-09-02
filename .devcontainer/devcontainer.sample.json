@@ -1,0 +1,30 @@
+{
+    "name": "WORKSPACE",
+    "dockerComposeFile": "./compose.yaml",
+    "overrideCommand": false,
+    "workspaceFolder": "/workspace/WORKSPACE",
+    "service": "dev",
+    "extensions": [
+        // python
+        "ms-python.vscode-pylance",
+        "njpwerner.autodocstring",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.flake8",
+        "ms-toolsai.jupyter",
+        // git
+        "eamodio.gitlens",
+        "donjayamanne.githistory",
+        "mhutchie.git-graph",
+        // markdown
+        "DavidAnson.vscode-markdownlint",
+        // docker
+        "ms-azuretools.vscode-docker",
+        // toml
+        "tamasfe.even-better-toml",
+        // live share
+        "ms-vsliveshare.vsliveshare",
+    ],
+    "remoteUser": "1000",
+    "postCreateCommand": "PASSWORD=pw .devcontainer/postCreateCommand.sh"
+}
