@@ -34,6 +34,7 @@ Then **Reopen Folder in Container** with VS Code extension.
 ### Check whether this project is correctly recognized
 
 ```sh
+$ poetry shell  # if needed
 $ python -m package_name.sample
 Hello World!
 ```
