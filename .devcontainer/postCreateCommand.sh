@@ -20,7 +20,7 @@
 # git submodule update --init
 
 ## Install python packages
-pip3 install poetry
+curl -sSL https://install.python-poetry.org | python3 -
 
 USE_VENV=true
 if [ $USE_VENV ]; then

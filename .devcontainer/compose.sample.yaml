@@ -8,14 +8,14 @@ services:
       ## mount repository
       - type: bind
         source: ../
-        target: /workspace/WORKSPACE_NAME
+        target: /app/repo-name
       ## mount .gitconfig
       - type: bind
         source: ~/.gitconfig
-        target: /home/DOCKER_USER/.gitconfig
+        target: /home/docker-user/.gitconfig
       ## mask /dist
       # - type: volume
-      #   target: /workspace/WORKSPACE_NAME/dist/
+      #   target: /app/repo-name/dist/
       ## for GPG signed commits
       # - type: bind
       #   source: ~/.gnupg/

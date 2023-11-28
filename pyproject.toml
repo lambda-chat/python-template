@@ -6,9 +6,9 @@ authors = ["Your Name <your.name@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.12"
+python = ">=3.11,<3.12"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 flake8 = "^4.0.1"
 pyproject-flake8 = "^0.0.1-alpha.2"
 isort = "^5.9.3"
@@ -25,7 +25,7 @@ include = ["package_name", "tests"]
 exclude = [".venv", "**/__pycache__"]
 ignore = []
 stubPath = ""
-pythonVersion = ">=3.9,<3.12"
+pythonVersion = ">=3.11,<3.12"
 executionEnvironments = []
 reportMissingImports = true
 reportMissingTypeStubs = false
