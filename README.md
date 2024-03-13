@@ -64,3 +64,4 @@ Imports in test file(s) are valid owing to `poetry install` that makes this proj
 - If you already created virtualenvs outside of container, please remove `.venv` before "Reopen Folder in Container".
 - "Dev Container Features" is considerable option for now. Please check it.
 - Dev tool suite (Black, Flake8, isort, etc.) can be replaced by Ruff (recommended).
+  - See `pyproject.toml` settings in https://github.com/lambda-chat/wsl-debian-cuda-devcontainer.
