@@ -62,3 +62,4 @@ Imports in test file(s) are valid owing to `poetry install` that makes this proj
 - When you uncomment dist/ setting, `dist/` will be empty volume which masks original `dist/` if it exists.
 - When you uncomment GPG settings, you cannot commit with GUI if GPG is activated. Use the integrated terminal instead.
 - If you already created virtualenvs outside of container, please remove `.venv` before "Reopen Folder in Container".
+- "Dev Container Features" is considerable option for now. Please check it.
