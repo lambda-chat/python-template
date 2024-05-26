@@ -2,11 +2,13 @@
 
 A Python project template for VS Code.
 
+**CAUTION**: Please delete or modify the `LICENSE` file if you do not want to set up a CC0 license.
+
 ## Requirements
 
 - VS Code (with `Dev Containers` extension by Microsoft)
 - Docker (e.g. [Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Optional: [GitHub CLI](https://cli.github.com/)
+- \[Optional\] [GitHub CLI](https://cli.github.com/)
 
 Install the following tools to WSL2 for CUDA support:
 
@@ -14,17 +16,26 @@ Install the following tools to WSL2 for CUDA support:
 - cuDNN (9.0.0 or later)
 - NVIDIA Container Toolkit (1.14.4 or later)
 
+## Customization
+
+Please change some strings in this repository according to your project.
+
+- `REPOSITORY_NAME`
+- `package_name`
+- `package-name`
+
 ## Dev Environments
 
 Files including optional settings:
 
 - `.devcontainer/compose.yaml` (GitHub CLI, CUDA)
 
-Then **Reopen Folder in Container** with VS Code extension.
+Please configure the settings if needed, then **Reopen Folder in Container** with VS Code extension.
 
 ### Notes
 
-- If you already created virtualenvs outside of Dev Container, please remove `.venv` before "Reopen Folder in Container". It is not compatible with Dev Container environment.
+- I recommend deleting the `.git` folder first.
+- If you already created virtualenvs outside of Dev Container, please delete `.venv` before "Reopen Folder in Container". It is not compatible with Dev Container environment.
 
 ### Check whether this project is correctly recognized
 
@@ -49,11 +60,3 @@ tests/test_sample.py .   [100%]
 
 ================ 1 passed in 0.01s ================
 ```
-
-## Customization
-
-Please change some strings in this repository according to your project.
-
-- `REPOSITORY_NAME`
-- `package_name`
-- `package-name`
