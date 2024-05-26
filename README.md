@@ -1,6 +1,6 @@
 # Python Template
 
-A Python project template for VS Code.
+A Python project template for VS Code. These codes are licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 **CAUTION**: Please delete or modify the `LICENSE` file if you do not want to set up a CC0 license.
 
