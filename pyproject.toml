@@ -2,72 +2,77 @@
 name = "package-name"
 version = "0.1.0"
 description = "A Python Project Template."
-authors = [
-    "lambda-chat <chat.algebrique@gmail.com>",
-]
+authors = ["lambda-chat <chat.algebrique@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.12"
 
-[tool.poetry.dev-dependencies]
-flake8 = "^4.0.1"
-isort = "^5.9.3"
-pytest = "^6.2.5"
-pyproject-flake8 = "^0.0.1-alpha.2"
-black = "^21.10b0"
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.5"
+pytest = "^8.2.1"
 
 [build-system]
-requires = [
-    "poetry_core>=1.0.0",
-]
+requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.flake8]
-## http://flake8.readthedocs.org/en/latest/warnings.html
-## http://pep8.readthedocs.org/en/latest/intro.html#error-codes
-ignore = ["W503", "W504"]
-max-line-length = 99
-exclude = [
-    ".git",
-    "__pycache__",
-    "old",
-    "build",
-    "dist",
-    ".venv",
-    "venv",
-]
-
-[tool.black]
-line-length = 99
-exclude = '''
-(
-    migrations
-    | .mypy_cache
-    | .pytest_cache
-    | .tox
-    | .venv
-)
-'''
-
 [tool.pyright]
-include = [
-    "package_name",
-    "tests",
-]
-exclude = [
-    ".venv",
-    "**/__pycache__",
-]
+include = ["src", "tests"]
+exclude = [".venv", "**/__pycache__"]
 ignore = []
 stubPath = ""
+pythonVersion = "3.12"
+executionEnvironments = []
+# turn off rules if they are too strict
 reportMissingImports = true
 reportMissingTypeStubs = false
-pythonVersion = "^3.9"
-executionEnvironments = []
+reportPropertyTypeMismatch = true
+reportFunctionMemberAccess = true
+reportImportCycles = true
+reportUnusedImport = true
+reportUnusedClass = true
+reportUnusedFunction = true
+reportUnusedVariable = true
+reportDuplicateImport = true
+reportUntypedFunctionDecorator = true
+reportUntypedClassDecorator = true
+reportUntypedBaseClass = true
+reportUntypedNamedTuple = true
+reportConstantRedefinition = true
+reportDeprecated = true
+reportIncompatibleMethodOverride = true
+reportIncompatibleVariableOverride = true
+reportUninitializedInstanceVariable = true
+reportUnnecessaryCast = true
+reportUnnecessaryComparison = true
+reportUnnecessaryContains = true
+reportImplicitStringConcatenation = true
+reportUnusedCallResult = "warning"
+reportUnusedExpression = true
+reportUnnecessaryTypeIgnoreComment = true
+reportMatchNotExhaustive = true
+reportShadowedImports = "warning"
 
-[tool.isort]
-include_trailing_comma = true
-line_length = 99
-multi_line_output = 3
-skip_glob = []
+[tool.ruff]
+# https://docs.astral.sh/ruff/configuration/
+line-length = 120
+target-version = "py312"
+include = ["src/**/*.py", "tests/**/*.py"]
+
+[tool.ruff.lint]
+# https://docs.astral.sh/ruff/linter/
+select = [
+    "B",   # flake8-bugbear
+    "COM", # flake8-commas
+    "E",   # pycodestyle
+    "F",   # Pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "SIM", # flake8-simplify
+    "UP",  # pyupgrade
+]
+ignore = ["COM812"]
+
+[tool.ruff.format]
+# https://docs.astral.sh/ruff/formatter/
+exclude = []

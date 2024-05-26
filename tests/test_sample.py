@@ -1,5 +1,4 @@
-import pytest  # NOQA
-
+import pytest  # type: ignore # noqa: F401
 from package_name.sample import hello
 
 

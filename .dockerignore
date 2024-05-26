@@ -9,6 +9,4 @@ tests/
 **/__pycache__/
 **/.mypy_cache/
 **/.pytest_cache/
-
-# Others
-.prod/
+**/.ruff_cache/

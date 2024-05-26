@@ -1,0 +1,62 @@
+{
+    "name": "REPOSITORY_NAME",
+    "dockerComposeFile": "./compose.yaml",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.12",
+            "installTools": false
+        },
+        "ghcr.io/devcontainers/features/aws-cli:1": {},
+        "ghcr.io/devcontainers-contrib/features/aws-cdk:2": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {},
+        "ghcr.io/devcontainers-contrib/features/poetry:2": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {},
+        "./local-feature": {}
+    },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/python:1",
+        "ghcr.io/devcontainers/features/aws-cli:1",
+        "ghcr.io/devcontainers-contrib/features/aws-cdk:2",
+        "ghcr.io/devcontainers/features/common-utils:2",
+        "ghcr.io/devcontainers-contrib/features/poetry:2",
+        "ghcr.io/devcontainers/features/github-cli:1",
+        "ghcr.io/devcontainers-contrib/features/fish-apt-get:1",
+        "./local-feature"
+    ],
+    "service": "dev",
+    "containerUser": "vscode",
+    "workspaceFolder": "/app/REPOSITORY_NAME",
+    "overrideCommand": false,
+    "remoteEnv": {
+        "GIT_EDITOR": "vim"
+    },
+    "postCreateCommand": ".devcontainer/post-create.sh; fish",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Python 
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "charliermarsh.ruff",
+                "ms-toolsai.jupyter",
+                "njpwerner.autodocstring",
+                // Git
+                "donjayamanne.githistory",
+                "eamodio.gitlens",
+                "mhutchie.git-graph",
+                // Markdown 
+                "DavidAnson.vscode-markdownlint",
+                // TOML 
+                "tamasfe.even-better-toml",
+                // Live Share
+                "ms-vsliveshare.vsliveshare",
+                // Docker 
+                "ms-azuretools.vscode-docker",
+                // GitHub Copilot
+                "github.copilot",
+                "github.copilot-chat"
+            ]
+        }
+    }
+}

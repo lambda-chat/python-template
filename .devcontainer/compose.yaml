@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  dev:
+    build:
+      context: ..
+      dockerfile: ./.devcontainer/Dockerfile
+    volumes:
+      - type: bind
+        source: ../
+        target: /app/REPOSITORY_NAME
+      - type: bind
+        source: ~/.gitconfig
+        target: /home/vscode/.gitconfig
+      # for GitHub repository (with GitHub CLI)
+      - type: bind
+        source: ~/.config/gh
+        target: /home/vscode/.config/gh
