@@ -61,6 +61,7 @@ reportShadowedImports = "warning"
 line-length = 120
 target-version = "py312"
 include = ["src/**/*.py", "tests/**/*.py"]
+extend-exclude = []
 
 [tool.ruff.lint]
 # https://docs.astral.sh/ruff/linter/
@@ -80,4 +81,3 @@ unfixable = ["SIM108"]
 
 [tool.ruff.format]
 # https://docs.astral.sh/ruff/formatter/
-exclude = []
