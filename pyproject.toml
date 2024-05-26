@@ -1,4 +1,5 @@
 [tool.poetry]
+# https://python-poetry.org/docs/pyproject/
 name = "package-name"
 version = "0.1.0"
 description = "A Python Project Template."
@@ -24,7 +25,8 @@ ignore = []
 stubPath = ""
 pythonVersion = "3.12"
 executionEnvironments = []
-# turn off rules if they are too strict
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+# Please turn off rules if they are too strict
 reportMissingImports = true
 reportMissingTypeStubs = false
 reportPropertyTypeMismatch = true
@@ -62,6 +64,7 @@ include = ["src/**/*.py", "tests/**/*.py"]
 
 [tool.ruff.lint]
 # https://docs.astral.sh/ruff/linter/
+# Please turn off rules if they are too strict
 select = [
     "B",   # flake8-bugbear
     "COM", # flake8-commas
@@ -73,6 +76,7 @@ select = [
     "UP",  # pyupgrade
 ]
 ignore = ["COM812"]
+unfixable = ["SIM108"]
 
 [tool.ruff.format]
 # https://docs.astral.sh/ruff/formatter/
