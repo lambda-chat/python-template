@@ -74,3 +74,21 @@ Format:
 ```sh
 ruff format
 ```
+
+## Q&A
+
+### Is it only for VS Code?
+
+No. You can use any other editor/IDE which can attach a container. To launch Dev Container, [Dev Container CLI](https://github.com/devcontainers/cli) is very useful. Please check it.
+
+```sh
+devcontainer up --workspace-folder .  # this is `docker compose up` alternative
+```
+
+### Why do you use in-project virtualenvs in Dev Container?
+
+There are two reasons. First, installing packages to system can affect system python behavior. Second, installing packages to mounted volume saves the packages from container deletion. As for Dev Container, the settings are reasonable, I think.
+
+### No type checking CI support?
+
+Not yet, sorry. It is difficult to prepare CI function due to the difference of behaviours between Pylance extension and Pyright CLI. To handle this issue, I am trying to use [pyright-python](https://github.com/RobertCraigie/pyright-python) and add some type stubs which only Pylance has.
