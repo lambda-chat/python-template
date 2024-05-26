@@ -6,9 +6,10 @@
             "version": "3.12",
             "installTools": false
         },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {},
         "ghcr.io/devcontainers/features/aws-cli:1": {},
         "ghcr.io/devcontainers-contrib/features/aws-cdk:2": {},
-        "ghcr.io/devcontainers/features/common-utils:2": {},
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},
         "ghcr.io/devcontainers/features/github-cli:1": {},
         "ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {},
@@ -16,9 +17,10 @@
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/python:1",
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1",
+        "ghcr.io/devcontainers/features/common-utils:2",
         "ghcr.io/devcontainers/features/aws-cli:1",
         "ghcr.io/devcontainers-contrib/features/aws-cdk:2",
-        "ghcr.io/devcontainers/features/common-utils:2",
         "ghcr.io/devcontainers-contrib/features/poetry:2",
         "ghcr.io/devcontainers/features/github-cli:1",
         "ghcr.io/devcontainers-contrib/features/fish-apt-get:1",
@@ -29,7 +31,7 @@
     "workspaceFolder": "/app/REPOSITORY_NAME",
     "overrideCommand": false,
     "remoteEnv": {
-        "GIT_EDITOR": "vim"
+        "EDITOR": "vim"
     },
     "postCreateCommand": ".devcontainer/post-create.sh; fish",
     "customizations": {
