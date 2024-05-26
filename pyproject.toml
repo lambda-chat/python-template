@@ -2,7 +2,7 @@
 name = "package-name"
 version = "0.1.0"
 description = "A Python Project Template."
-authors = ["lambda-chat <chat.algebrique@gmail.com>"]
+authors = ["Your Name <your.name@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
