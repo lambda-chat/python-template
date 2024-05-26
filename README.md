@@ -60,3 +60,17 @@ tests/test_sample.py .   [100%]
 
 ================ 1 passed in 0.01s ================
 ```
+
+## Linter/Formatter
+
+Lint:
+
+```sh
+ruff check [--fix]
+```
+
+Format:
+
+```sh
+ruff format
+```
