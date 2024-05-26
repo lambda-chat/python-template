@@ -3,6 +3,7 @@ name = "package-name"
 version = "0.1.0"
 description = "A Python Project Template."
 authors = ["Your Name <your.name@example.com>"]
+packages = [{ include = "package_name", from = "src" }]
 readme = "README.md"
 
 [tool.poetry.dependencies]
