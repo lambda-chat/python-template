@@ -79,7 +79,7 @@ ruff format
 
 ### Is it only for VS Code?
 
-No. You can use any other editor/IDE which can attach a container. To launch Dev Container, [Dev Container CLI](https://github.com/devcontainers/cli) is very useful. Please check it.
+No. You can use any other editor/IDE which can attach to a running container. To launch Dev Container, [Dev Container CLI](https://github.com/devcontainers/cli) is very useful. Please check it.
 
 ```sh
 devcontainer up --workspace-folder .  # this is `docker compose up` alternative
