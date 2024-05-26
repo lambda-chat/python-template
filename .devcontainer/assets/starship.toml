@@ -1,0 +1,15 @@
+[container]
+format = "[$symbol]($style) "
+
+[git_branch]
+format = "on [$symbol $branch(:$remote_branch)]($style) "
+symbol = "🌱"
+
+[python]
+version_format = ""
+
+[package]
+disabled = true
+
+[aws]
+format = "on [$symbol$profile]($style) "
