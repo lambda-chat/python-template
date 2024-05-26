@@ -91,4 +91,4 @@ There are two reasons. First, installing packages to system can affect system py
 
 ### No type checking CI support?
 
-Not yet, sorry. It is difficult to prepare CI function due to the difference of behaviours between Pylance extension and Pyright CLI. To handle this issue, I am trying to use [pyright-python](https://github.com/RobertCraigie/pyright-python) and add some type stubs which only Pylance has.
+Not yet, sorry. It is difficult to prepare CI function due to the difference of behaviors between Pylance extension and Pyright CLI. To handle this issue, I am trying to use [pyright-python](https://github.com/RobertCraigie/pyright-python) and add some type stubs which only Pylance has.
