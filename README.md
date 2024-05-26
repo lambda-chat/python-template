@@ -8,10 +8,23 @@ A Python project template for VS Code.
 - Docker (e.g. [Docker Desktop](https://www.docker.com/products/docker-desktop/))
 - Optional: [GitHub CLI](https://cli.github.com/)
 
+Install the following tools to WSL2 for CUDA support:
+
+- CUDA Toolkit (12.1 or later)
+- cuDNN (9.0.0 or later)
+- NVIDIA Container Toolkit (1.14.4 or later)
+
 ## Dev Environments
 
-If you do not use Github CLI, please modify `.devcontainer/compose.yaml`.
+Files including optional settings:
+
+- `.devcontainer/compose.yaml` (GitHub CLI, CUDA)
+
 Then **Reopen Folder in Container** with VS Code extension.
+
+### Notes
+
+- If you already created virtualenvs outside of Dev Container, please remove `.venv` before "Reopen Folder in Container". It is not compatible with Dev Container environment.
 
 ### Check whether this project is correctly recognized
 
@@ -37,6 +50,10 @@ tests/test_sample.py .   [100%]
 ================ 1 passed in 0.01s ================
 ```
 
-## Notes
+## Customization
 
-- If you already created virtualenvs outside of Dev Container, please remove `.venv` before "Reopen Folder in Container". It is not compatible with Dev Container environment.
+Please change some strings in this repository according to your project.
+
+- `REPOSITORY_NAME`
+- `package_name`
+- `package-name`
