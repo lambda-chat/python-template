@@ -1,18 +1,27 @@
-[tool.poetry]
 # https://python-poetry.org/docs/pyproject/
+[project]
 name = "package-name"
-version = "0.1.0"
 description = "A Python Project Template."
-authors = ["Your Name <your.name@example.com>"]
-packages = [{ include = "package_name", from = "src" }]
-readme = "README.md"
+dynamic = ["version"]
+requires-python = ">=3.12"
+authors = [{name ="Your Name", email="your.name@example.com"}]
+dependencies = []
+optional-dependencies = {}
 
-[tool.poetry.dependencies]
-python = "^3.12"
+[tool.poetry]
+version = "0.1.0"
+packages = [{ include = "package_name", from = "src" }]
+exclude = []
+include = []
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.4.5"
-pytest = "^8.2.1"
+ruff = "^0.10.0"
+pytest = "^8.3.5"
+
+[tool.poetry.group.ci.dependencies]
+microsoft-python-type-stubs = {git = "https://github.com/microsoft/python-type-stubs.git"}
+pandas-stubs = "*"
+scipy-stubs = "*"
 
 [build-system]
 requires = ["poetry_core>=1.0.0"]
@@ -24,13 +33,13 @@ exclude = [".venv", "**/__pycache__"]
 ignore = []
 stubPath = ""
 pythonVersion = "3.12"
+typeCheckingMode = "standard"
 executionEnvironments = []
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md
 # Please turn off rules if they are too strict
 reportMissingImports = true
 reportMissingTypeStubs = false
 reportPropertyTypeMismatch = true
-reportFunctionMemberAccess = true
 reportImportCycles = true
 reportUnusedImport = true
 reportUnusedClass = true
@@ -43,8 +52,6 @@ reportUntypedBaseClass = true
 reportUntypedNamedTuple = true
 reportConstantRedefinition = true
 reportDeprecated = true
-reportIncompatibleMethodOverride = true
-reportIncompatibleVariableOverride = true
 reportUninitializedInstanceVariable = true
 reportUnnecessaryCast = true
 reportUnnecessaryComparison = true
@@ -76,8 +83,9 @@ select = [
     "SIM", # flake8-simplify
     "UP",  # pyupgrade
 ]
-ignore = ["COM812"]
-unfixable = ["SIM108"]
+ignore = ["COM812", "SIM108"]
+fixable = ["ALL"]
+unfixable = []
 
 [tool.ruff.format]
 # https://docs.astral.sh/ruff/formatter/

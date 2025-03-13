@@ -4,6 +4,7 @@
 poetry config virtualenvs.create true
 poetry config virtualenvs.in-project true
 poetry install
+poetry self add poetry-plugin-shell
 
 # [Optional] Install starship prompt 
 curl -fsSL https://starship.rs/install.sh -o starship_install.sh

@@ -1,5 +1,4 @@
 {
-    "python.analysis.typeCheckingMode": "basic",
     "python.analysis.diagnosticMode": "workspace",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,

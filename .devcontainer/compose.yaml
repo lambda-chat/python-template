@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   dev:
     build:
@@ -16,6 +14,10 @@ services:
       - type: bind
         source: ~/.config/gh
         target: /home/vscode/.config/gh
+      # for AWS develepment
+      # - type: bind
+      #   source: ~/.aws
+      #   target: /home/vscode/.aws
 
 ## If you want to use CUDA in the container, uncomment the following lines.
 #    deploy:
